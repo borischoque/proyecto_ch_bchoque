@@ -1,0 +1,203 @@
+//********************************************
+// ARCHIVO----> ESTILOS PARA PAGINA PRODUCTOS
+//********************************************
+.productos {
+  &__seccionTitulo {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(
+      to bottom,
+      $proGeneralSeccion2,
+      $proGeneralSeccion1
+    );
+    @keyframes movimiento {
+      0% {
+        align-self: center;
+      }
+      25% {
+        align-self: flex-start;
+      }
+      50% {
+        align-self: center;
+      }
+      75% {
+        align-self: flex-end;
+      }
+      100% {
+        align-self: center;
+      }
+    }
+    &--simbol {
+      letter-spacing: 2rem;
+      color: $proGeneralTexto;
+      font-size: 3rem;
+      animation-name: movimiento;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-duration: 0.5s;
+      animation-delay: 0s;
+    }
+    &--texto {
+      color: $proGeneralTexto;
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+  &__seccion1 {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--texto {
+      background-color: #eccdaf;
+      color: brown;
+      font-size: 2rem;
+      border: 0.5rem solid brown;
+      border-radius: 1rem;
+      padding: 0.5rem 0.5rem;
+    }
+    &--formulario {
+      background-color: #aaa7a7;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50vw;
+      height: 10vh;
+    }
+    &--etiqueta {
+      font-size: 2rem;
+    }
+    &--inputDatos {
+      height: 2.5rem;
+      width: 30vw;
+    }
+  }
+  &__seccion2 {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--texto {
+      background-color: #eccdaf;
+      color: brown;
+      font-size: 2rem;
+      border: 0.5rem solid brown;
+      border-radius: 1rem;
+      padding: 0.5rem 0.5rem;
+    }
+    &--cuadroImagenes {
+      width: 50vw;
+      height: 20vh;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      background-color: #aaa7a7;
+    }
+    &--itemCuadro {
+      font-size: 1.25rem;
+      list-style-type: none;
+    }
+    &--itemCuadro:hover {
+      transform: scale(1.25);
+      transition: all 1s;
+    }
+    &--itemLink {
+      background-color: #eb994d;
+      color: white;
+      text-decoration: none;
+      font-style: italic;
+      padding: 0 1rem;
+      border: solid brown;
+      border-radius: 1rem;
+    }
+    &--itemLink:hover {
+      background-color: #e9b587;
+      color: #555;
+    }
+  }
+  &__seccion3 {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    &--texto {
+      background-color: #eccdaf;
+      color: brown;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    &--galeria {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &--cuadroProductos {
+      width: 420px;
+      background-color: #d3d2d2;
+      display: grid;
+      grid-template-areas:
+        "imagen-producto boton-stock"
+        "imagen-producto none"
+        "imagen-producto boton-compra"
+        "tabla-precio tabla-precio";
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      border: 0.1rem solid brown;
+      border-radius: 1rem;
+    }
+    &--imgProductos {
+      width: 90%;
+      height: 90%;
+      object-fit: fill;
+      grid-area: imagen-producto;
+      justify-self: center;
+      align-self: center;
+      border: solid 0.5rem #e65936;
+      border-radius: 1rem;
+    }
+    &--btnCompra {
+      grid-area: boton-compra;
+    }
+    &--btnStock {
+      grid-area: boton-stock;
+    }
+    &--btnCompartida {
+      background-color: #eb6a4d;
+      font-size: 2rem;
+      width: min-content;
+      padding: 0.25rem;
+      border-radius: 1rem;
+    }
+    &--tabla {
+      grid-area: tabla-precio;
+      border: solid 0.5rem black;
+      border-radius: 1rem;
+    }
+    &--tablaTitulo {
+      font-size: 2.5rem;
+      font-style: italic;
+    }
+    &--tablaCabecera {
+      font-size: 2rem;
+    }
+    &--tablaPrecio {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}

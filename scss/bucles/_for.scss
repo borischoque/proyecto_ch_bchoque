@@ -1,0 +1,15 @@
+// ARCHIVO----> MIXIN
+@import "../variables/variables";
+
+// **********************************
+// ********* PAGE: PRINCIPAL ********* //
+// ********* CLASES GENERADAS POR FOR ********* //
+// **********************************
+@for $i from 1 through 8 {
+  .principal__seccion2--Producto#{$i} {
+    color: map-get($colorFuenteProductos, "producto#{$i}");
+  }
+  .principal__seccion2--colorProducto#{$i} {
+    background-color: map-get($colorFondoFuenteProductos, "fondoProducto#{$i}");
+  }
+}

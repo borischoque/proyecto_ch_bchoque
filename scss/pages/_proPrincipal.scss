@@ -1,0 +1,182 @@
+//********************************************
+// ARCHIVO----> ESTILOS PARA PAGINA PRINCIPAL
+//********************************************
+
+.principal {
+  &__seccion1 {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    background-color: #aaa7a7;
+    border: brown 0.5em;
+    border-radius: 4em;
+    border-style: outset;
+    height: 75vh;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    @include tablet_disp {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+    }
+    &--imagen {
+      width: 100%;
+      max-height: 25em;
+      transition: all 0.5s;
+      object-fit: fill;
+      @include mobile_disp {
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+    &--imagen:hover {
+      transform: rotateZ(20deg) scale(1.25);
+      filter: grayscale(1);
+    }
+    &--cuadroImagenes {
+      min-width: 400px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-template-rows: repeat(2, 50%);
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      overflow: hidden;
+      @include mobile_disp {
+        min-width: 90vw;
+        height: auto;
+        grid-template-columns: repeat(1, 90%);
+        grid-template-rows: repeat(4, 70vh);
+      }
+    }
+    &--cuadroTexto {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 75vw;
+      text-align: center;
+      @include mobile_disp {
+        flex-direction: column;
+      }
+    }
+  }
+  &__seccion2 {
+    margin-top: $margenEntreSeccion;
+    margin-right: $margenLateralesSeccion;
+    margin-left: $margenLateralesSeccion;
+    border: brown 0.5em;
+    border-radius: 2em;
+    border-style: outset;
+    height: 50vh;
+    @include tablet_disp {
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      height: 75vh;
+      font-size: $textTamaño1;
+    }
+    &--cuadroImagenes {
+      height: 85%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      background-image: url(../img/tamanna-rumee-Wt33T42JNCM-unsplash.jpg);
+      background-position: center;
+      background-size: cover;
+      @include tablet_disp {
+        height: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+      @include mobile_disp {
+        height: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+      }
+    }
+    &--itemCuadro {
+      font-size: 2.5em;
+      list-style-type: none;
+    }
+    &--itemCuadro:hover {
+      transform: scale(1.25);
+      transition: all 1s;
+    }
+    &--itemLink {
+      background-color: #eb994d;
+      text-decoration: none;
+      font-weight: 400;
+      font-style: italic;
+      padding: 0 1em;
+      border: solid brown;
+      border-radius: 1em;
+    }
+    &--itemLink:hover {
+      background-color: #e9b587;
+      color: #555;
+    }
+    &--pie {
+      height: 15%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eb994d;
+      @include tablet_disp {
+        height: 10%;
+      }
+      @include mobile_disp {
+        height: 10%;
+      }
+    }
+    @keyframes movimiento {
+      0% {
+        align-self: center;
+      }
+      25% {
+        align-self: flex-start;
+      }
+      50% {
+        align-self: center;
+      }
+      75% {
+        align-self: flex-end;
+      }
+      100% {
+        align-self: center;
+      }
+    }
+    &--simbol {
+      letter-spacing: 0.75em;
+      color: brown;
+      font-size: 3em;
+      animation-name: movimiento;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-duration: 0.5s;
+      animation-delay: 0s;
+      @include tablet_disp {
+        letter-spacing: 0.25em;
+      }
+      @include mobile_disp {
+        display: none;
+      }
+    }
+    &--texto {
+      color: brown;
+      font-size: 2.5em;
+      letter-spacing: 0.3em;
+      @include tablet_disp {
+        letter-spacing: 0;
+      }
+    }
+  }
+}

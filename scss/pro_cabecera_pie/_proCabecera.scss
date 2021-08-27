@@ -1,0 +1,64 @@
+// ARCHIVO----> ESTILOS PARA CABECERA
+@import "../variables/variables";
+@import "../mixin/mixin";
+.cabecera {
+  background-image: linear-gradient(
+    to left,
+    $cabeceraGradiente1,
+    $cabeceraGradiente2
+  );
+  opacity: 0.9;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  &__logo {
+    height: inherit;
+    &--imagen {
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__navegacion {
+    @include tablet_disp {
+      font-size: $textTamaño2;
+      height: 100%;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+      height: 100%;
+    }
+    &--menu {
+      display: flex;
+      @include tablet_disp {
+        height: inherit;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      @include mobile_disp {
+        height: inherit;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+    &--itemLista {
+      margin: 0 1em;
+      font-size: 2.5em;
+    }
+
+    &--itemLink {
+      background-color: $cabeceraNavegacionFondo;
+      color: $cabeceraNavegacionFuente;
+      text-decoration: none;
+      padding: 0 1em;
+      font-family: "Roboto", sans-serif;
+    }
+    &--itemLink:hover {
+      background-color: #e9b587;
+      color: #555;
+      border-radius: 1em;
+      border-style: solid;
+    }
+  }
+}

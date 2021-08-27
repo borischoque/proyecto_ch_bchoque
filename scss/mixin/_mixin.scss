@@ -1,0 +1,18 @@
+// ARCHIVO----> MIXIN
+@import "../variables/variables";
+
+// **********************************
+// ********* MEDIA QUERY ********* //
+// **********************************
+
+@mixin tablet_disp {
+  @media only screen and (max-width: map-get($TamañoMediaQuery,"tamaño2")) {
+    @content;
+  }
+}
+
+@mixin mobile_disp {
+  @media only screen and (max-width: map-get($TamañoMediaQuery,"tamaño1")) {
+    @content;
+  }
+}
