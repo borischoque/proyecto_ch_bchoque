@@ -1,9 +1,10 @@
 # proyecto_ch_bchoque
 
-##**Descripción:**
+## **Descripción:**
+
 En este proyecto se aplican diferentes lenguajes para el desarrollo de una web.
 
-###Se aplcaron los siguientes lenguajes:
+### Se aplcaron los siguientes lenguajes:
 
 1. HTML
 2. CSS
