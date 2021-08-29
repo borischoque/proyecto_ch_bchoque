@@ -13,13 +13,27 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  @include mobile_disp {
+    height: 15vh;
+  }
   &__logo {
     height: inherit;
     &--imagen {
       height: 100%;
       width: auto;
+      @include mobile_disp {
+        display: none;
+      }
+    }
+    &--imagenMobile {
+      display: none;
+      @include mobile_disp {
+        display: inline;
+        max-height: 100%;
+      }
     }
   }
+
   &__navegacion {
     @include tablet_disp {
       font-size: $textTamaño2;
@@ -27,7 +41,15 @@
     }
     @include mobile_disp {
       font-size: $textTamaño1;
-      height: 100%;
+      height: 75%;
+    }
+    &--menuMobile {
+      display: none;
+      position: relative;
+      @include mobile_disp {
+        display: inline;
+        height: 100%;
+      }
     }
     &--menu {
       display: flex;
@@ -37,9 +59,7 @@
         justify-content: space-around;
       }
       @include mobile_disp {
-        height: inherit;
-        flex-direction: column;
-        justify-content: space-around;
+        display: none;
       }
     }
     &--itemLista {

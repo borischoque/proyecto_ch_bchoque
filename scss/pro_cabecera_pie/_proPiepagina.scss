@@ -6,6 +6,7 @@
   height: 20vh;
   @include mobile_disp {
     font-size: $textTamaño1;
+    height: 15vh;
   }
   &__seccion1 {
     height: 80%;
@@ -14,6 +15,9 @@
     &--imagen {
       height: 100%;
       width: auto;
+      @include mobile_disp {
+        display: none;
+      }
     }
     &--subSeccion {
       width: 100%;
@@ -29,10 +33,19 @@
     }
     &--titulo2 {
       font-size: 2.5em;
+      @include mobile_disp {
+        font-size: 3em;
+        text-align: center;
+      }
     }
     &--img {
       height: 3em;
       width: 3em;
+      @include mobile_disp {
+        height: 4em;
+        width: 4em;
+        padding: 0 3em;
+      }
     }
     &--subtexto1 {
       font-size: 1.5em;
