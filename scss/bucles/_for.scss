@@ -13,3 +13,19 @@
     background-color: map-get($colorFondoFuenteProductos, "fondoProducto#{$i}");
   }
 }
+
+.principal__seccion1--imgFondo1,
+.principal__seccion1--imgFondo2,
+.principal__seccion1--imgFondo3 {
+  padding: 1em 0;
+  margin: 1em 0;
+  border-radius: 3em;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+@for $i from 1 through 3 {
+  .principal__seccion1--imgFondo#{$i} {
+    background-image: url("../img/fast-delivery-#{$i}.jpg");
+  }
+}

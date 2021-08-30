@@ -15,8 +15,17 @@
     border: 0.1em $color solid;
     border-radius: 1em;
     font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.6);
     transition: transform 0.5s ease-in-out;
     position: relative;
+    @include tablet_disp {
+      color: black;
+      background-color: #fcdbc8;
+    }
+    @include mobile_disp {
+      color: black;
+      background-color: #fcdbc8;
+    }
   }
 
   .principal__seccion1--#{$texto}:hover {
@@ -46,11 +55,22 @@
     width: 10em;
     margin: 0 auto;
     color: $color;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     border: 0.1em $color solid;
     border-radius: 2em;
     padding: 0.5em 1em;
     font-size: 2em;
     text-transform: uppercase;
+    position: absolute;
+    left: 1em;
+    top: 0;
+    transform: translateY(+7em);
+    transition: transform 1s ease-in;
+    @include tablet_disp {
+      background-color: rgb(255, 255, 255);
+    }
+    @include mobile_disp {
+      background-color: rgb(255, 255, 255);
+    }
   }
 }

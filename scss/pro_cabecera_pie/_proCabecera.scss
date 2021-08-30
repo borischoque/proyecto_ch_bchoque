@@ -14,7 +14,7 @@
   align-items: center;
   position: sticky;
   @include mobile_disp {
-    height: 15vh;
+    height: 10vh;
   }
   &__logo {
     height: inherit;

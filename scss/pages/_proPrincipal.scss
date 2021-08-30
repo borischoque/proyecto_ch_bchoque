@@ -1,69 +1,98 @@
 //********************************************
 // ARCHIVO----> ESTILOS PARA PAGINA PRINCIPAL
 //********************************************
-
 .principal {
-  &__seccion1 {
+  &__seccionTitulo {
     margin-top: $margenEntreSeccion;
     margin-right: $margenLateralesSeccion;
     margin-left: $margenLateralesSeccion;
-    background-color: #aaa7a7;
-    border: brown 0.5em;
-    border-radius: 4em;
-    border-style: outset;
-    height: 75vh;
-    width: auto;
+    height: 15vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-content: center;
     @include tablet_disp {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
       font-size: $textTamaño2;
+      height: 7.5vh;
     }
     @include mobile_disp {
       font-size: $textTamaño1;
     }
-    &--imagen {
-      width: 100%;
-      max-height: 25em;
-      transition: all 0.5s;
-      object-fit: fill;
-      @include mobile_disp {
-        width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-      }
+    &--texto {
+      color: $proGeneralTexto;
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5em;
+      letter-spacing: 0.3em;
     }
-    &--imagen:hover {
-      transform: rotateZ(20deg) scale(1.25);
-      filter: grayscale(1);
+    &--textoComplemento {
+      color: $proGeneralTexto;
+      font-size: 2em;
     }
-    &--cuadroImagenes {
-      min-width: 400px;
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 200px);
-      grid-template-rows: repeat(2, 50%);
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      overflow: hidden;
-      @include mobile_disp {
-        min-width: 90vw;
-        height: auto;
-        grid-template-columns: repeat(1, 90%);
-        grid-template-rows: repeat(4, 70vh);
-      }
+  }
+  &__seccion1 {
+    margin: 4em auto;
+    height: 45vh;
+    width: fit-content;
+    // display: flex;
+    // justify-content: space-between;
+    @include tablet_disp {
+      font-size: $textTamaño2;
+      // flex-direction: column;
+      // align-items: center;
+      height: 50vh;
     }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+      height: 90vh;
+    }
+    // &--imagen {
+    //   width: 100%;
+    //   max-height: 25em;
+    //   transition: all 0.5s;
+    //   object-fit: fill;
+    //   @include mobile_disp {
+    //     width: 100%;
+    //     max-height: 100%;
+    //     object-fit: contain;
+    //   }
+    // }
+    // &--imagen:hover {
+    //   transform: rotateZ(20deg) scale(1.25);
+    //   filter: grayscale(1);
+    // }
+    // &--cuadroImagenes {
+    //   min-width: 400px;
+    //   height: 100%;
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 200px);
+    //   grid-template-rows: repeat(2, 50%);
+    //   justify-content: center;
+    //   align-content: center;
+    //   align-items: center;
+    //   overflow: hidden;
+    //   @include mobile_disp {
+    //     min-width: 90vw;
+    //     height: auto;
+    //     grid-template-columns: repeat(1, 90%);
+    //     grid-template-rows: repeat(4, 70vh);
+    //   }
+    // }
+
     &--cuadroTexto {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
+      height: inherit;
       width: 75vw;
       text-align: center;
+      position: relative;
+      @include tablet_disp {
+        height: 22vh;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
       @include mobile_disp {
-        flex-direction: column;
+        height: 25vh;
       }
     }
   }
