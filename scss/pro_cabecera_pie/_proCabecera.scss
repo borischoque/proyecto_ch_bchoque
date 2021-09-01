@@ -14,8 +14,16 @@
   align-items: center;
   position: sticky;
   @include mobile_disp {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(
+      to bottom,
+      $cabeceraGradiente1,
+      $cabeceraGradiente2
+    );
     height: 10vh;
   }
+
   &__logo {
     height: inherit;
     &--imagen {
@@ -33,7 +41,48 @@
       }
     }
   }
-
+  &__menuMobile {
+    display: none;
+    @include mobile_disp {
+      display: none;
+    }
+    &--hamburguesaborde,
+    &--hamburguesaborde::before,
+    &--hamburguesaborde::after {
+      @include mobile_disp {
+        display: block;
+        background-color: #ce671e;
+        height: 0.75em;
+        width: 5em;
+        position: absolute;
+        border-radius: 2em;
+        right: 2em;
+      }
+    }
+    &--hamburguesaborde::before,
+    &--hamburguesaborde::after {
+      @include mobile_disp {
+        content: "";
+        position: absolute;
+        right: 0;
+      }
+    }
+    &--hamburguesaborde::before {
+      @include mobile_disp {
+        bottom: 1em;
+      }
+    }
+    &--hamburguesaborde::after {
+      @include mobile_disp {
+        top: 1em;
+      }
+    }
+  }
+  &__menuMobile:checked ~ nav {
+    @include mobile_disp {
+      display: block;
+    }
+  }
   &__navegacion {
     @include tablet_disp {
       font-size: $textTamaño2;
@@ -42,14 +91,7 @@
     @include mobile_disp {
       font-size: $textTamaño1;
       height: 75%;
-    }
-    &--menuMobile {
       display: none;
-      position: relative;
-      @include mobile_disp {
-        display: inline;
-        height: 100%;
-      }
     }
     &--menu {
       display: flex;
@@ -59,12 +101,27 @@
         justify-content: space-around;
       }
       @include mobile_disp {
-        display: none;
+        position: absolute;
+        align-content: center;
+        width: 60em;
+        height: 25em;
+        top: 10em;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-image: linear-gradient(
+          to top,
+          $cabeceraGradiente1,
+          $cabeceraGradiente2
+        );
       }
     }
     &--itemLista {
       margin: 0 1em;
       font-size: 2.5em;
+      @include mobile_disp {
+        margin: 0 auto;
+      }
     }
 
     &--itemLink {
@@ -73,6 +130,12 @@
       text-decoration: none;
       padding: 0 1em;
       font-family: "Roboto", sans-serif;
+      @include mobile_disp {
+        background-color: #e9b587;
+        color: #555;
+        border-radius: 1em;
+        border-style: solid;
+      }
     }
     &--itemLink:hover {
       background-color: #e9b587;

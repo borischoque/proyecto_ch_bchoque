@@ -92,6 +92,7 @@
         justify-content: space-evenly;
       }
       @include mobile_disp {
+        z-index: -1;
         height: 25vh;
       }
     }
@@ -108,6 +109,7 @@
       font-size: $textTamaño2;
     }
     @include mobile_disp {
+      z-index: -1;
       height: 75vh;
       font-size: $textTamaño1;
     }
