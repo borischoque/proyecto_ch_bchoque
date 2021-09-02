@@ -39,9 +39,10 @@ $margenLateralesSeccion: 1rem;
 // **********************************
 // DISPOSITIVOS
 $TamañoMediaQuery: (
-  tamaño1: 360px,
-  tamaño2: 700px,
-  tamaño3: 768px,
+  tamaño1: 640px,
+  tamaño2: 768px,
+  tamaño3: 769px,
+  tamaño4: 1300px,
 );
 // TAMAÑOS DE FUENTE
 $textTamaño1: 6px;
@@ -67,8 +68,8 @@ $principalComentarios: (
 // **********************************
 
 $colorFuenteProductos: (
-  producto1: rgba(219, 154, 143, 0.863),
-  producto2: rgb(223, 175, 179),
+  producto1: rgba(233, 221, 53, 0.863),
+  producto2: rgb(207, 67, 79),
   producto3: rgb(218, 235, 171),
   producto4: rgb(114, 134, 128),
   producto5: rgb(255, 0, 0),
