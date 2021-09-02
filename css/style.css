@@ -20,7 +20,7 @@ html {
   justify-content: space-between;
   align-items: center;
   position: sticky; }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .cabecera {
       position: sticky;
       top: 0;
@@ -31,21 +31,21 @@ html {
     .cabecera__logo--imagen {
       height: 100%;
       width: auto; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .cabecera__logo--imagen {
           display: none; } }
     .cabecera__logo--imagenMobile {
       display: none; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .cabecera__logo--imagenMobile {
           display: inline;
           max-height: 100%; } }
   .cabecera__menuMobile {
     display: none; }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__menuMobile {
         display: none; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__menuMobile--hamburguesaborde, .cabecera__menuMobile--hamburguesaborde::before, .cabecera__menuMobile--hamburguesaborde::after {
         display: block;
         background-color: #ce671e;
@@ -54,25 +54,25 @@ html {
         position: absolute;
         border-radius: 2em;
         right: 2em; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__menuMobile--hamburguesaborde::before, .cabecera__menuMobile--hamburguesaborde::after {
         content: "";
         position: absolute;
         right: 0; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__menuMobile--hamburguesaborde::before {
         bottom: 1em; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__menuMobile--hamburguesaborde::after {
         top: 1em; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .cabecera__menuMobile:checked ~ nav {
       display: block; } }
   @media only screen and (max-width: 768px) {
     .cabecera__navegacion {
       font-size: 8px;
       height: 100%; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .cabecera__navegacion {
       font-size: 6px;
       height: 75%;
@@ -90,7 +90,7 @@ html {
         height: inherit;
         flex-direction: column;
         justify-content: space-around; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__navegacion--menu {
         position: absolute;
         align-content: center;
@@ -104,7 +104,7 @@ html {
   .cabecera__navegacion--itemLista {
     margin: 0 1em;
     font-size: 2.5em; }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__navegacion--itemLista {
         margin: 0 auto; } }
   .cabecera__navegacion--itemLink {
@@ -113,7 +113,7 @@ html {
     text-decoration: none;
     padding: 0 1em;
     font-family: "Roboto", sans-serif; }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .cabecera__navegacion--itemLink {
         background-color: #e9b587;
         color: #555;
@@ -128,7 +128,7 @@ html {
 .piepagina {
   margin-top: 1rem;
   height: 20vh; }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .piepagina {
       font-size: 6px;
       height: 15vh; } }
@@ -139,7 +139,7 @@ html {
     .piepagina__seccion1--imagen {
       height: 100%;
       width: auto; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .piepagina__seccion1--imagen {
           display: none; } }
     .piepagina__seccion1--subSeccion {
@@ -147,28 +147,28 @@ html {
       display: flex;
       justify-content: space-around;
       margin: auto 0; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .piepagina__seccion1--subSeccion {
           justify-content: center; } }
     .piepagina__seccion1--titulo1 {
       font-size: 2em; }
     .piepagina__seccion1--titulo2 {
       font-size: 2em; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .piepagina__seccion1--titulo2 {
           font-size: 3em;
           text-align: center; } }
     .piepagina__seccion1--img {
       height: 3em;
       width: 3em; }
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 730px) {
         .piepagina__seccion1--img {
           height: 4em;
           width: 4em;
           padding: 0 3em; } }
     .piepagina__seccion1--subtexto1 {
       font-size: 1.5em; }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .piepagina__seccion1--titulo1, .piepagina__seccion1--subtexto1 {
         display: none; } }
   .piepagina__seccion2 {
@@ -193,7 +193,7 @@ html {
     .principal__seccionTitulo {
       font-size: 8px;
       height: 7.5vh; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccionTitulo {
       font-size: 6px; } }
   .principal__seccionTitulo--texto {
@@ -211,7 +211,7 @@ html {
   @media only screen and (max-width: 768px) {
     .principal__seccion1 {
       font-size: 8px; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1 {
       font-size: 6px; } }
   .principal__seccion1--cuadroTexto {
@@ -226,7 +226,7 @@ html {
     @media only screen and (max-width: 768px) {
       .principal__seccion1--cuadroTexto {
         justify-content: space-evenly; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .principal__seccion1--cuadroTexto {
         z-index: -1; } }
 
@@ -244,7 +244,7 @@ html {
   @media only screen and (max-width: 768px) {
     .principal__seccion2 {
       font-size: 8px; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion2 {
       z-index: -1;
       height: 75vh;
@@ -264,7 +264,7 @@ html {
         height: 90%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr); } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .principal__seccion2--cuadroImagenes {
         height: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -296,7 +296,7 @@ html {
     @media only screen and (max-width: 768px) {
       .principal__seccion2--pie {
         height: 10%; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .principal__seccion2--pie {
         height: 10%; } }
 
@@ -326,7 +326,7 @@ html {
     @media only screen and (max-width: 768px) {
       .principal__seccion2--simbol {
         letter-spacing: 0.25em; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 730px) {
       .principal__seccion2--simbol {
         display: none; } }
   .principal__seccion2--texto {
@@ -517,7 +517,7 @@ html {
     .principal__seccion1--texto1 {
       color: black;
       background-color: #fcdbc8; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--texto1 {
       color: black;
       background-color: #fcdbc8; } }
@@ -557,7 +557,7 @@ html {
     .principal__seccion1--texto2 {
       color: black;
       background-color: #fcdbc8; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--texto2 {
       color: black;
       background-color: #fcdbc8; } }
@@ -597,7 +597,7 @@ html {
     .principal__seccion1--texto3 {
       color: black;
       background-color: #fcdbc8; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--texto3 {
       color: black;
       background-color: #fcdbc8; } }
@@ -640,7 +640,7 @@ html {
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario1 {
       background-color: white; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--Comentario1 {
       background-color: white; } }
 
@@ -662,7 +662,7 @@ html {
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario2 {
       background-color: white; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--Comentario2 {
       background-color: white; } }
 
@@ -684,7 +684,7 @@ html {
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario3 {
       background-color: white; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 730px) {
     .principal__seccion1--Comentario3 {
       background-color: white; } }
 
