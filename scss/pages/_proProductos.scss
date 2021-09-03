@@ -6,7 +6,7 @@
     margin-top: $margenEntreSeccion;
     margin-right: $margenLateralesSeccion;
     margin-left: $margenLateralesSeccion;
-    height: 5rem;
+    height: 5em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,21 +32,45 @@
         align-self: center;
       }
     }
+    @include deskop_to_tablet {
+      font-size: $textTamaño2;
+    }
+    @include tablet_disp {
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+    }
     &--simbol {
-      letter-spacing: 2rem;
+      letter-spacing: 0.75em;
       color: $proGeneralTexto;
-      font-size: 3rem;
+      font-size: 3em;
       animation-name: movimiento;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in;
       animation-duration: 0.5s;
       animation-delay: 0s;
+      @include deskop_to_tablet {
+        letter-spacing: 0.3em;
+      }
+      @include tablet_disp {
+        letter-spacing: 0.25em;
+      }
+      @include mobile_disp {
+        display: none;
+      }
     }
     &--texto {
       color: $proGeneralTexto;
       font-family: "Roboto", sans-serif;
-      font-size: 2.5rem;
-      letter-spacing: 0.5rem;
+      font-size: 2.5em;
+      letter-spacing: 0.3em;
+      @include deskop_to_tablet {
+        letter-spacing: 0.1em;
+      }
+      @include tablet_disp {
+        letter-spacing: 0;
+      }
     }
   }
   &__seccion1 {
@@ -54,30 +78,72 @@
     margin-right: $margenLateralesSeccion;
     margin-left: $margenLateralesSeccion;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    @include deskop_to_tablet {
+      flex-direction: column;
+    }
+    @include tablet_disp {
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+    }
     &--texto {
       background-color: #eccdaf;
       color: brown;
-      font-size: 2rem;
-      border: 0.5rem solid brown;
-      border-radius: 1rem;
-      padding: 0.5rem 0.5rem;
+      font-size: 2em;
+      border: 0.25em solid brown;
+      border-radius: 3em;
+      padding: 0.5em 0.5em;
+      transition: transform 0.5s ease-in;
+      position: relative;
+    }
+    &--texto:hover {
+      transform: translateX(-3em);
+    }
+    &--texto::after {
+      content: "\21E8";
+      font-size: 5em;
+      position: absolute;
+      bottom: -0.5em;
+      right: -1em;
+      transform: scale(0, 1);
+      transition: transform 0.25s ease-in;
+    }
+    &--texto:hover::after {
+      transform: scale(1, 1) translateX(3rem);
     }
     &--formulario {
       background-color: #aaa7a7;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 50vw;
-      height: 10vh;
+      width: 70em;
+      height: 7em;
+      border-radius: 3em;
+      margin: 0 2em;
+      @include deskop_to_tablet {
+        margin-top: $margenEntreSeccion;
+      }
+      @include mobile_disp {
+        width: 50vw;
+        flex-direction: column;
+      }
     }
     &--etiqueta {
-      font-size: 2rem;
+      font-size: 2em;
+      @include mobile_disp {
+        display: none;
+      }
     }
     &--inputDatos {
-      height: 2.5rem;
-      width: 30vw;
+      height: 2em;
+      width: 30em;
+      @include mobile_disp {
+        height: 1.5em;
+        width: 35vw;
+      }
     }
   }
   &__seccion2 {
@@ -85,90 +151,163 @@
     margin-right: $margenLateralesSeccion;
     margin-left: $margenLateralesSeccion;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    @include deskop_to_tablet {
+      flex-direction: column;
+    }
+    @include tablet_disp {
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+    }
     &--texto {
       background-color: #eccdaf;
       color: brown;
-      font-size: 2rem;
-      border: 0.5rem solid brown;
-      border-radius: 1rem;
-      padding: 0.5rem 0.5rem;
+      font-size: 2em;
+      border: 0.25em solid brown;
+      border-radius: 3em;
+      padding: 0.5em 0.5em;
+      transition: transform 0.5s ease-in;
+      position: relative;
+    }
+    &--texto:hover {
+      transform: translateX(-3em);
+    }
+    &--texto::after {
+      content: "\21E8";
+      font-size: 5em;
+      position: absolute;
+      bottom: -0.5em;
+      right: -1em;
+      transform: scale(0, 1);
+      transition: transform 0.25s ease-in;
+    }
+    &--texto:hover::after {
+      transform: scale(1, 1) translateX(3rem);
     }
     &--cuadroImagenes {
-      width: 50vw;
-      height: 20vh;
+      width: 70em;
+      // height: 15em;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
       justify-items: center;
       align-items: center;
       background-color: #aaa7a7;
+      border-radius: 3em;
+      @include deskop_to_tablet {
+        margin-top: $margenEntreSeccion;
+      }
+      @include mobile_disp {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 50vw;
+      }
     }
     &--itemCuadro {
-      font-size: 1.25rem;
+      text-align: center;
+      font-size: 1.5em;
+      font-style: oblique;
+      background-color: #eb994d;
       list-style-type: none;
+      color: black;
+      border-radius: 1.5em;
+      margin: 1em 0;
     }
+    &--itemLink,
+    &--itemLink::before,
+    &--itemLink::after,
     &--itemCuadro:hover {
-      transform: scale(1.25);
-      transition: all 1s;
+      transition: all 0.5s ease-in;
     }
     &--itemLink {
-      background-color: #eb994d;
-      color: white;
+      display: block;
+      color: brown;
+      padding: 0.75em 0.25em;
       text-decoration: none;
-      font-style: italic;
-      padding: 0 1rem;
-      border: solid brown;
-      border-radius: 1rem;
+
+      position: relative;
+      z-index: 1;
     }
     &--itemLink:hover {
-      background-color: #e9b587;
-      color: #555;
+      color: black;
+    }
+    &--itemLink::after {
+      display: block;
+      position: absolute;
+      border-radius: 1.5em;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 0;
+      content: ".";
+      color: transparent;
+      background: hsl(48, 89%, 50%);
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+    }
+    &--itemLink:hover::after {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
     }
   }
   &__seccion3 {
     margin-top: $margenEntreSeccion;
     margin-right: $margenLateralesSeccion;
     margin-left: $margenLateralesSeccion;
+    @include deskop_to_tablet {
+      font-size: $textTamaño2;
+    }
+    @include tablet_disp {
+      font-size: $textTamaño2;
+    }
+    @include mobile_disp {
+      font-size: $textTamaño1;
+    }
     &--texto {
+      margin-top: $margenEntreSeccion;
       background-color: #eccdaf;
       color: brown;
-      font-size: 2.5rem;
+      font-size: 2.5em;
       text-align: center;
     }
     &--galeria {
-      margin-top: 1rem;
+      margin-top: 1em;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
     }
     &--cuadroProductos {
-      width: 420px;
+      width: 40em;
       background-color: #d3d2d2;
       display: grid;
       grid-template-areas:
         "imagen-producto boton-stock"
-        "imagen-producto none"
         "imagen-producto boton-compra"
         "tabla-precio tabla-precio";
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
       border: 0.1rem solid brown;
       border-radius: 1rem;
     }
     &--imgProductos {
       width: 90%;
       height: 90%;
-      object-fit: fill;
+      object-fit: cover;
       grid-area: imagen-producto;
       justify-self: center;
       align-self: center;
-      border: solid 0.5rem #e65936;
-      border-radius: 1rem;
+      border: solid 0.5em #e65936;
+      border-radius: 1em;
     }
     &--btnCompra {
       grid-area: boton-compra;
@@ -178,25 +317,26 @@
     }
     &--btnCompartida {
       background-color: #eb6a4d;
-      font-size: 2rem;
+      font-size: 2.5em;
       width: min-content;
-      padding: 0.25rem;
-      border-radius: 1rem;
+      padding: 0.2em;
+      border-radius: 1em;
     }
     &--tabla {
       grid-area: tabla-precio;
-      border: solid 0.5rem black;
-      border-radius: 1rem;
+      margin: 0 1em;
+      border: solid 0.5em black;
+      border-radius: 1em;
     }
     &--tablaTitulo {
-      font-size: 2.5rem;
+      font-size: 2.5em;
       font-style: italic;
     }
     &--tablaCabecera {
-      font-size: 2rem;
+      font-size: 2em;
     }
     &--tablaPrecio {
-      font-size: 2rem;
+      font-size: 2em;
       text-align: center;
     }
   }

@@ -4,9 +4,9 @@
 .piepagina {
   margin-top: $margenEntreSeccion;
   height: 20vh;
-  @include mobile_disp {
+  @include deskop_to_tablet {
     font-size: $textTamaño1;
-    height: 15vh;
+    height: 10vh;
   }
   &__seccion1 {
     height: 80%;
