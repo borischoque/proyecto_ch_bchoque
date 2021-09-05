@@ -6,6 +6,9 @@
   height: 20vh;
   @include deskop_to_tablet {
     font-size: $textTamaño1;
+    height: 15vh;
+  }
+  @include mobile_disp {
     height: 10vh;
   }
   &__seccion1 {

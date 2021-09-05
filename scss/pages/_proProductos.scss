@@ -98,9 +98,17 @@
       padding: 0.5em 0.5em;
       transition: transform 0.5s ease-in;
       position: relative;
+      @include tablet_disp {
+        transform: none;
+        transition: none;
+        z-index: -1;
+      }
     }
     &--texto:hover {
       transform: translateX(-3em);
+      @include tablet_disp {
+        transform: none;
+      }
     }
     &--texto::after {
       content: "\21E8";
@@ -110,9 +118,17 @@
       right: -1em;
       transform: scale(0, 1);
       transition: transform 0.25s ease-in;
+      @include tablet_disp {
+        display: none;
+        transform: none;
+        transition: none;
+      }
     }
     &--texto:hover::after {
       transform: scale(1, 1) translateX(3rem);
+      @include tablet_disp {
+        transform: none;
+      }
     }
     &--formulario {
       background-color: #aaa7a7;
@@ -127,7 +143,7 @@
         margin-top: $margenEntreSeccion;
       }
       @include mobile_disp {
-        width: 50vw;
+        width: 75vw;
         flex-direction: column;
       }
     }
@@ -171,9 +187,17 @@
       padding: 0.5em 0.5em;
       transition: transform 0.5s ease-in;
       position: relative;
+      @include tablet_disp {
+        transform: none;
+        transition: none;
+        z-index: -1;
+      }
     }
     &--texto:hover {
       transform: translateX(-3em);
+      @include tablet_disp {
+        transform: none;
+      }
     }
     &--texto::after {
       content: "\21E8";
@@ -183,13 +207,20 @@
       right: -1em;
       transform: scale(0, 1);
       transition: transform 0.25s ease-in;
+      @include tablet_disp {
+        display: none;
+        transform: none;
+        transition: none;
+      }
     }
     &--texto:hover::after {
       transform: scale(1, 1) translateX(3rem);
+      @include tablet_disp {
+        transform: none;
+      }
     }
     &--cuadroImagenes {
       width: 70em;
-      // height: 15em;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -203,12 +234,12 @@
       @include mobile_disp {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        width: 50vw;
+        width: 75vw;
       }
     }
     &--itemCuadro {
       text-align: center;
-      font-size: 1.5em;
+      font-size: 2em;
       font-style: oblique;
       background-color: #eb994d;
       list-style-type: none;
