@@ -12,6 +12,77 @@ html {
   font-family: "Atkinson Hyperlegible", sans-serif !important;
   font-size: 62.5%; }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style-type: none; }
+
+html {
+  font-family: "Atkinson Hyperlegible", sans-serif !important;
+  font-size: 62.5%; }
+
+.loading-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: gray;
+  opacity: 0.75; }
+
+.loader {
+  width: 20em;
+  height: 20em;
+  line-height: 20em;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10em 0 0 -10em;
+  font-size: 3em;
+  color: #fff;
+  perspective: 20em; }
+
+.load_anim1,
+.load_anim2 {
+  position: absolute;
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: 0.5em solid;
+  border-left-color: red;
+  border-right-color: yellow;
+  border-top-color: yellowgreen;
+  border-bottom-color: blue;
+  left: 45%;
+  top: 43%;
+  margin: -10em 0 0 -10em;
+  animation: loadAnim 3s;
+  animation-iteration-count: infinite; }
+
+.load_anim2 {
+  animation: loadAnim2 3s;
+  animation-iteration-count: infinite; }
+
+@keyframes loadAnim {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg); }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg); } }
+
+@keyframes loadAnim2 {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg); }
+  100% {
+    transform: rotate3d(1, 1, 1, -360deg); } }
+
+.hidden {
+  display: none; }
+
 .cabecera {
   background-image: linear-gradient(to left, #ffcc90, white);
   opacity: 0.9;
@@ -1014,6 +1085,10 @@ html {
     color: brown;
     text-transform: uppercase;
     font-size: 2.5em; }
+    @media only screen and (max-width: 768px) {
+      .contacto__seccionFormulario--titulo {
+        padding: 0 0;
+        text-align: center; } }
   .contacto__seccionFormulario--etiqueta {
     margin-top: 1rem;
     color: brown;
@@ -1021,6 +1096,9 @@ html {
   .contacto__seccionFormulario--inputDatos {
     width: 30em;
     font-size: 2em; }
+    @media only screen and (max-width: 768px) {
+      .contacto__seccionFormulario--inputDatos {
+        width: 20em; } }
 
 .principal__seccion1--texto1 {
   width: 10em;
@@ -1156,7 +1234,7 @@ html {
   left: 1em;
   top: 0;
   transform: translateY(7em);
-  transition: transform 1s ease-in; }
+  transition: transform 4s ease-in-out; }
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario1 {
       background-color: white; } }
@@ -1178,7 +1256,7 @@ html {
   left: 1em;
   top: 0;
   transform: translateY(7em);
-  transition: transform 1s ease-in; }
+  transition: transform 4s ease-in-out; }
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario2 {
       background-color: white; } }
@@ -1200,7 +1278,7 @@ html {
   left: 1em;
   top: 0;
   transform: translateY(7em);
-  transition: transform 1s ease-in; }
+  transition: transform 4s ease-in-out; }
   @media only screen and (max-width: 768px) {
     .principal__seccion1--Comentario3 {
       background-color: white; } }

@@ -152,6 +152,10 @@
       color: $proGeneralTexto;
       text-transform: uppercase;
       font-size: 2.5em;
+      @include tablet_disp {
+        padding: 0 0;
+        text-align: center;
+      }
     }
     &--etiqueta {
       margin-top: $margenEntreSeccion;
@@ -161,6 +165,9 @@
     &--inputDatos {
       width: 30em;
       font-size: 2em;
+      @include tablet_disp {
+        width: 20em;
+      }
     }
   }
 }
