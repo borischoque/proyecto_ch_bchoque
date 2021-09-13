@@ -161,7 +161,6 @@ html {
         align-items: center; } }
     @media only screen and (max-width: 768px) {
       .cabecera__navegacion--menu {
-        flex-wrap: nowrap;
         height: inherit;
         justify-content: space-around; } }
     @media only screen and (max-width: 640px) {
@@ -190,11 +189,8 @@ html {
     font-family: "Roboto", sans-serif; }
     @media only screen and (max-width: 640px) {
       .cabecera__navegacion--itemLink {
-        background-color: #e9b587;
-        color: #555;
-        border-radius: 1em;
-        border-style: solid; } }
-  .cabecera__navegacion--itemLink:hover {
+        border-radius: 1em; } }
+  .cabecera__navegacion--itemLink:hover, .cabecera__navegacion--itemLinkActual {
     background-color: #e9b587;
     color: #555;
     border-radius: 1em;

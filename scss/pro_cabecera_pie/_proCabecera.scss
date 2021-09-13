@@ -26,7 +26,6 @@
       $cabeceraGradiente1,
       $cabeceraGradiente2
     );
-    // height: 10vh;
   }
 
   &__logo {
@@ -106,7 +105,7 @@
         align-items: center;
       }
       @include tablet_disp {
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
         height: inherit;
         justify-content: space-around;
       }
@@ -142,13 +141,11 @@
       padding: 0 1em;
       font-family: "Roboto", sans-serif;
       @include mobile_disp {
-        background-color: #e9b587;
-        color: #555;
         border-radius: 1em;
-        border-style: solid;
       }
     }
-    &--itemLink:hover {
+    &--itemLink:hover,
+    &--itemLinkActual {
       background-color: #e9b587;
       color: #555;
       border-radius: 1em;
