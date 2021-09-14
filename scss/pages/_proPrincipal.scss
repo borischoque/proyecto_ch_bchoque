@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
+    background-color: lightcoral;
     @include tablet_disp {
       font-size: $textTamaño2;
       height: 7.5vh;
@@ -32,6 +33,7 @@
   &__seccion1 {
     margin: 2em auto;
     width: fit-content;
+    background-color: lightblue;
     @include tablet_disp {
       font-size: $textTamaño2;
     }
