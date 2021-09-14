@@ -2,6 +2,38 @@
 // ARCHIVO----> ESTILOS PARA PAGINA PRINCIPAL
 //********************************************
 .principal {
+  &__seccion {
+    /*animacion de fonfo*/
+    @keyframes slide {
+      0% {
+        transform: translateX(-25%);
+      }
+      100% {
+        transform: translateX(25%);
+      }
+    }
+    &--fondo1,
+    &--fondo2,
+    &--fondo3 {
+      background-image: linear-gradient(-60deg, bisque 50%, white 50%);
+      bottom: 0;
+      left: -50%;
+      opacity: 0.6;
+      position: fixed;
+      right: -50%;
+      top: 0;
+      z-index: -1;
+    }
+    &--fondo1 {
+      animation: slide 3s ease-in-out infinite alternate;
+    }
+    &--fondo2 {
+      animation: slide 4s ease-in infinite alternate-reverse;
+    }
+    &--fondo3 {
+      animation: slide 5s ease infinite alternate-reverse;
+    }
+  }
   &__seccionTitulo {
     margin-top: $margenEntreSeccion;
     margin-right: $margenLateralesSeccion;
