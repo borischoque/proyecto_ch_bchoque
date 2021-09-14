@@ -262,8 +262,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-content: center;
-  background-color: lightcoral; }
+  align-content: center; }
   @media only screen and (max-width: 768px) {
     .principal__seccionTitulo {
       font-size: 8px;
@@ -282,8 +281,7 @@ html {
 
 .principal__seccion1 {
   margin: 2em auto;
-  width: fit-content;
-  background-color: lightblue; }
+  width: fit-content; }
   @media only screen and (max-width: 768px) {
     .principal__seccion1 {
       font-size: 8px; } }
