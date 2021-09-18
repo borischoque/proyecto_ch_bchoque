@@ -153,6 +153,7 @@ html {
       height: 75%;
       display: none; } }
   .cabecera__navegacion--menu {
+    z-index: 100;
     display: flex; }
     @media only screen and (max-width: 1300px) {
       .cabecera__navegacion--menu {
@@ -498,6 +499,85 @@ html {
       .productos__seccionTitulo--texto {
         letter-spacing: 0; } }
 
+.productos__seccionFondo {
+  z-index: -99;
+  background-color: #e9b587;
+  opacity: 0.6;
+  position: absolute;
+  top: 29vh;
+  left: 0;
+  right: 0;
+  height: 75%;
+  margin: auto;
+  width: 97vw; }
+  @media only screen and (max-width: 1300px) {
+    .productos__seccionFondo {
+      top: 15vh;
+      height: 120%;
+      width: 96vw; } }
+  @media only screen and (max-width: 768px) {
+    .productos__seccionFondo {
+      top: 16vh;
+      height: 100%;
+      width: 95vw; } }
+  @media only screen and (max-width: 640px) {
+    .productos__seccionFondo {
+      top: 16vh;
+      height: 88%;
+      width: 93vw; } }
+
+@keyframes drop {
+  0% {
+    top: -50%; }
+  100% {
+    top: 110%; } }
+  .productos__seccionFondo--linea {
+    z-index: -1;
+    position: absolute;
+    width: 1em;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background-color: #eb994d;
+    opacity: 0.75;
+    overflow: hidden; }
+    .productos__seccionFondo--linea::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, #ce671e 100%, #ce671e 100%);
+      animation: drop 4s 0s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97); }
+    .productos__seccionFondo--linea:nth-child(1) {
+      margin-left: -20%; }
+      .productos__seccionFondo--linea:nth-child(1)::after {
+        animation-delay: 2s; }
+    .productos__seccionFondo--linea:nth-child(3) {
+      margin-left: 20%; }
+      .productos__seccionFondo--linea:nth-child(3)::after {
+        animation-delay: 6.5s; }
+    .productos__seccionFondo--linea:nth-child(4) {
+      margin-left: -35%; }
+      .productos__seccionFondo--linea:nth-child(4)::after {
+        animation-delay: 3s; }
+    .productos__seccionFondo--linea:nth-child(5) {
+      margin-left: 35%; }
+      .productos__seccionFondo--linea:nth-child(5)::after {
+        animation-delay: 4s; }
+    .productos__seccionFondo--linea:nth-child(6) {
+      margin-left: -45%; }
+      .productos__seccionFondo--linea:nth-child(6)::after {
+        animation-delay: 4s; }
+    .productos__seccionFondo--linea:nth-child(7) {
+      margin-left: 45%; }
+      .productos__seccionFondo--linea:nth-child(7)::after {
+        animation-delay: 5s; }
+
 .productos__seccion1 {
   margin-top: 1rem;
   margin-right: 1rem;
@@ -514,45 +594,70 @@ html {
   @media only screen and (max-width: 640px) {
     .productos__seccion1 {
       font-size: 6px; } }
-  .productos__seccion1--texto {
-    background-color: #eccdaf;
-    color: brown;
-    font-size: 2em;
-    border: 0.25em solid brown;
-    border-radius: 3em;
-    padding: 0.5em 0.5em;
-    transition: transform 0.5s ease-in;
-    position: relative; }
-    @media only screen and (max-width: 768px) {
-      .productos__seccion1--texto {
-        transform: none;
-        transition: none;
-        z-index: -1; } }
-  .productos__seccion1--texto:hover {
-    transform: translateX(-3em); }
-    @media only screen and (max-width: 768px) {
-      .productos__seccion1--texto:hover {
-        transform: none; } }
-  .productos__seccion1--texto::after {
-    content: "\21E8";
-    font-size: 5em;
+  .productos__seccion1--tarjeta {
+    z-index: 10;
+    position: relative;
+    width: 30em;
+    height: 15em;
+    background-color: #eb994d;
+    overflow: hidden; }
+    .productos__seccion1--tarjeta::after {
+      z-index: 10;
+      content: "\279C";
+      color: black;
+      font-size: 5em;
+      position: absolute;
+      top: 1.5em;
+      left: 4em;
+      transform: scale(0, 0);
+      transition: transform 0.25s ease-in; }
+      @media only screen and (max-width: 1300px) {
+        .productos__seccion1--tarjeta::after {
+          writing-mode: vertical-rl; } }
+    .productos__seccion1--tarjeta:hover::after {
+      transform: scale(1, 1) translateX(3rem); }
+      @media only screen and (max-width: 768px) {
+        .productos__seccion1--tarjeta:hover::after {
+          transform: none; } }
+  .productos__seccion1--textoTarjeta {
+    z-index: 9;
+    font-family: "Roboto", sans-serif;
     position: absolute;
-    bottom: -0.5em;
-    right: -1em;
-    transform: scale(0, 1);
-    transition: transform 0.25s ease-in; }
-    @media only screen and (max-width: 768px) {
-      .productos__seccion1--texto::after {
-        display: none;
-        transform: none;
-        transition: none; } }
-  .productos__seccion1--texto:hover::after {
-    transform: scale(1, 1) translateX(3rem); }
-    @media only screen and (max-width: 768px) {
-      .productos__seccion1--texto:hover::after {
-        transform: none; } }
+    top: 1.5em;
+    left: 1.75em;
+    font-size: 3em;
+    font-weight: 800;
+    color: white; }
+  .productos__seccion1--imagenTarjeta {
+    z-index: 100;
+    width: 22em;
+    height: 15em;
+    background-image: url(../img/fast-delivery-2.jpg);
+    background-size: 100% 100%;
+    filter: grayscale(100%); }
+  .productos__seccion1--lateralBoton {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 9em;
+    left: 20em;
+    background-color: #e9b587;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    mix-blend-mode: hard-light; }
+    @media only screen and (max-width: 640px) {
+      .productos__seccion1--lateralBoton {
+        top: 4em;
+        left: 11em; } }
+  .productos__seccion1:hover .productos__seccion1--lateralBoton {
+    transform: scale(12); }
+  .productos__seccion1:hover .productos__seccion1--imagenTarjeta {
+    filter: grayscale(0); }
   .productos__seccion1--formulario {
-    background-color: #aaa7a7;
+    border: brown solid 0.5em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -596,6 +701,67 @@ html {
   @media only screen and (max-width: 640px) {
     .productos__seccion2 {
       font-size: 6px; } }
+  .productos__seccion2--tarjeta {
+    position: relative;
+    width: 30em;
+    height: 15em;
+    background-color: #eb994d;
+    overflow: hidden; }
+    .productos__seccion2--tarjeta::after {
+      z-index: 100;
+      content: "\279C";
+      color: black;
+      font-size: 5em;
+      position: absolute;
+      top: 1.5em;
+      left: 4em;
+      transform: scale(0, 0);
+      transition: transform 0.25s ease-in; }
+      @media only screen and (max-width: 1300px) {
+        .productos__seccion2--tarjeta::after {
+          writing-mode: vertical-rl; } }
+    .productos__seccion2--tarjeta:hover::after {
+      transform: scale(1, 1) translateX(3rem); }
+      @media only screen and (max-width: 768px) {
+        .productos__seccion2--tarjeta:hover::after {
+          transform: none; } }
+  .productos__seccion2--textoTarjeta {
+    z-index: 99;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 1em;
+    left: 1.75em;
+    font-size: 3em;
+    font-weight: 800;
+    color: white; }
+  .productos__seccion2--imagenTarjeta {
+    z-index: 100;
+    width: 22em;
+    height: 15em;
+    background-image: url(../img/fast-delivery-3.jpg);
+    background-size: 100% 100%;
+    filter: grayscale(100%); }
+  .productos__seccion2--lateralBoton {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 8em;
+    left: 20em;
+    background-color: #e9b587;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    mix-blend-mode: hard-light; }
+    @media only screen and (max-width: 640px) {
+      .productos__seccion2--lateralBoton {
+        top: 4em;
+        left: 11em; } }
+  .productos__seccion2:hover .productos__seccion2--lateralBoton {
+    transform: scale(12); }
+  .productos__seccion2:hover .productos__seccion2--imagenTarjeta {
+    filter: grayscale(0); }
   .productos__seccion2--texto {
     background-color: #eccdaf;
     color: brown;
@@ -634,13 +800,13 @@ html {
       .productos__seccion2--texto:hover::after {
         transform: none; } }
   .productos__seccion2--cuadroImagenes {
+    border: brown solid 0.5em;
     width: 70em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    background-color: #aaa7a7;
     border-radius: 3em; }
     @media only screen and (max-width: 1300px) {
       .productos__seccion2--cuadroImagenes {

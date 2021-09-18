@@ -98,6 +98,7 @@
       display: none;
     }
     &--menu {
+      z-index: 100;
       display: flex;
       @include deskop_to_tablet {
         flex-wrap: wrap;
