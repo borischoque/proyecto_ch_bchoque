@@ -88,6 +88,7 @@
     }
   }
   &__navegacion {
+    z-index: 1000;
     @include tablet_disp {
       font-size: $textTamaño2;
       height: 100%;
@@ -98,9 +99,10 @@
       display: none;
     }
     &--menu {
-      z-index: 100;
+      // z-index: 100;
       display: flex;
       @include deskop_to_tablet {
+        // z-index: 1000;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -119,7 +121,6 @@
         top: 11em;
         left: 0;
         right: 0;
-        z-index: 1;
         background-image: linear-gradient(
           to top,
           $cabeceraGradiente1,
@@ -145,7 +146,10 @@
         border-radius: 1em;
       }
     }
-    &--itemLink:hover,
+    &--itemLink:hover {
+      color: $cabeceraNavegacionFondo;
+      background-color: $cabeceraNavegacionFuente;
+    }
     &--itemLinkActual {
       background-color: #e9b587;
       color: #555;

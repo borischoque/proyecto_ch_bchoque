@@ -143,59 +143,62 @@ html {
   @media only screen and (max-width: 640px) {
     .cabecera__menuMobile:checked ~ nav {
       display: block; } }
-  @media only screen and (max-width: 768px) {
-    .cabecera__navegacion {
-      font-size: 8px;
-      height: 100%; } }
-  @media only screen and (max-width: 640px) {
-    .cabecera__navegacion {
-      font-size: 6px;
-      height: 75%;
-      display: none; } }
-  .cabecera__navegacion--menu {
-    z-index: 100;
-    display: flex; }
-    @media only screen and (max-width: 1300px) {
-      .cabecera__navegacion--menu {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center; } }
+  .cabecera__navegacion {
+    z-index: 1000; }
     @media only screen and (max-width: 768px) {
-      .cabecera__navegacion--menu {
-        height: inherit;
-        justify-content: space-around; } }
+      .cabecera__navegacion {
+        font-size: 8px;
+        height: 100%; } }
     @media only screen and (max-width: 640px) {
-      .cabecera__navegacion--menu {
-        flex-direction: column;
-        position: absolute;
-        align-content: center;
-        width: 100vw;
-        height: 25em;
-        top: 11em;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        background-image: linear-gradient(to top, #ffcc90, white); } }
-  .cabecera__navegacion--itemLista {
-    margin: 0 1em;
-    font-size: 2.5em; }
-    @media only screen and (max-width: 640px) {
-      .cabecera__navegacion--itemLista {
-        margin: 0 auto; } }
-  .cabecera__navegacion--itemLink {
-    background-color: #eb994d;
-    color: white;
-    text-decoration: none;
-    padding: 0 1em;
-    font-family: "Roboto", sans-serif; }
-    @media only screen and (max-width: 640px) {
-      .cabecera__navegacion--itemLink {
-        border-radius: 1em; } }
-  .cabecera__navegacion--itemLink:hover, .cabecera__navegacion--itemLinkActual {
-    background-color: #e9b587;
-    color: #555;
-    border-radius: 1em;
-    border-style: solid; }
+      .cabecera__navegacion {
+        font-size: 6px;
+        height: 75%;
+        display: none; } }
+    .cabecera__navegacion--menu {
+      display: flex; }
+      @media only screen and (max-width: 1300px) {
+        .cabecera__navegacion--menu {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center; } }
+      @media only screen and (max-width: 768px) {
+        .cabecera__navegacion--menu {
+          height: inherit;
+          justify-content: space-around; } }
+      @media only screen and (max-width: 640px) {
+        .cabecera__navegacion--menu {
+          flex-direction: column;
+          position: absolute;
+          align-content: center;
+          width: 100vw;
+          height: 25em;
+          top: 11em;
+          left: 0;
+          right: 0;
+          background-image: linear-gradient(to top, #ffcc90, white); } }
+    .cabecera__navegacion--itemLista {
+      margin: 0 1em;
+      font-size: 2.5em; }
+      @media only screen and (max-width: 640px) {
+        .cabecera__navegacion--itemLista {
+          margin: 0 auto; } }
+    .cabecera__navegacion--itemLink {
+      background-color: #eb994d;
+      color: white;
+      text-decoration: none;
+      padding: 0 1em;
+      font-family: "Roboto", sans-serif; }
+      @media only screen and (max-width: 640px) {
+        .cabecera__navegacion--itemLink {
+          border-radius: 1em; } }
+    .cabecera__navegacion--itemLink:hover {
+      color: #eb994d;
+      background-color: white; }
+    .cabecera__navegacion--itemLinkActual {
+      background-color: #e9b587;
+      color: #555;
+      border-radius: 1em;
+      border-style: solid; }
 
 .piepagina {
   margin-top: 1rem;
@@ -595,14 +598,14 @@ html {
     .productos__seccion1 {
       font-size: 6px; } }
   .productos__seccion1--tarjeta {
-    z-index: 10;
+    z-index: -1;
     position: relative;
     width: 30em;
     height: 15em;
     background-color: #eb994d;
     overflow: hidden; }
     .productos__seccion1--tarjeta::after {
-      z-index: 10;
+      z-index: 1000;
       content: "\279C";
       color: black;
       font-size: 5em;
@@ -629,7 +632,7 @@ html {
     font-weight: 800;
     color: white; }
   .productos__seccion1--imagenTarjeta {
-    z-index: 100;
+    z-index: 10;
     width: 22em;
     height: 15em;
     background-image: url(../img/fast-delivery-2.jpg);
@@ -702,13 +705,14 @@ html {
     .productos__seccion2 {
       font-size: 6px; } }
   .productos__seccion2--tarjeta {
+    z-index: -10;
     position: relative;
     width: 30em;
     height: 15em;
     background-color: #eb994d;
     overflow: hidden; }
     .productos__seccion2--tarjeta::after {
-      z-index: 100;
+      z-index: -11;
       content: "\279C";
       color: black;
       font-size: 5em;
@@ -1241,10 +1245,17 @@ html {
     border: #eb994d solid 0.1em;
     height: min-content; }
 
+.contacto__recuadro {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center; }
+  @media only screen and (max-width: 1300px) {
+    .contacto__recuadro {
+      flex-direction: column;
+      align-items: center; } }
+
 .contacto__seccionFormulario {
-  margin-top: 1rem;
-  margin-right: auto;
-  margin-left: auto; }
+  margin-top: 1rem; }
   @media only screen and (max-width: 1300px) {
     .contacto__seccionFormulario {
       font-size: 8px; } }
@@ -1285,6 +1296,24 @@ html {
     @media only screen and (max-width: 768px) {
       .contacto__seccionFormulario--inputDatos {
         width: 20em; } }
+    .contacto__seccionFormulario--inputDatos:focus {
+      background-color: #f3dcc7; }
+
+.contacto__seccionMapa {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30em;
+  height: 35em;
+  border: lightslategray solid 0.5em; }
+  @media only screen and (max-width: 1300px) {
+    .contacto__seccionMapa {
+      font-size: 8px; } }
+  @media only screen and (max-width: 768px) {
+    .contacto__seccionMapa {
+      font-size: 8px; } }
+  @media only screen and (max-width: 640px) {
+    .contacto__seccionMapa {
+      font-size: 6px; } }
 
 #error section {
   margin: 10% auto;
